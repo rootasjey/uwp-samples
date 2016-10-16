@@ -1,0 +1,42 @@
+﻿<Page x:Class="uwpsamples.Views.WelcomePage" 
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+      xmlns:local="using:uwpsamples.Views" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ScrollViewer Style="{StaticResource PageScrollViewerStyle}">
+            <StackPanel>
+                <RichTextBlock>
+                    <Paragraph FontSize="26">
+                        <Bold>WELCOME!</Bold>
+                    </Paragraph>
+                    <Paragraph>
+                        This app has been created to showcase simple UWP (Universal Windows Platform) samples
+                        that don't exist on the official Microsoft samples or that have different approach here.
+                        <LineBreak/>
+                    </Paragraph>
+
+                    <Paragraph>
+                        Here are some of the samples you will find in this app:
+                        <LineBreak/>
+                        -winComposition
+                        <LineBreak/>
+                        -ListView manipulations
+                    </Paragraph>
+
+                    <Paragraph Margin="0,20">
+                        If you want to reach me, tweet
+                        <Hyperlink NavigateUri="http://www.twitter.com/jeremiecorpinot">@jeremiecorpinot</Hyperlink>
+                        <LineBreak/>
+                        You can also read me on
+                        <Hyperlink NavigateUri="https://medium.com/@jeremiecorpinot">Medium</Hyperlink>
+                    </Paragraph>
+                </RichTextBlock>
+                
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
