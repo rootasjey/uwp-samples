@@ -4,7 +4,7 @@ using Windows.Data.Xml.Dom;
 using Windows.Foundation;
 using Windows.UI.Notifications;
 
-namespace uwpsamples.Controllers {
+namespace uwp_samples.Controllers {
     public class Common {
         private static object _sharedObj;
         private static DataTransferManager _dataTransferManager;

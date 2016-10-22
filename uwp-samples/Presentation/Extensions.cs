@@ -6,7 +6,7 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
 
-namespace uwpsamples.Presentation {
+namespace uwp_samples.Presentation {
     public static class Extensions
     {
         public static List<Control> AllChildren(this DependencyObject parent)

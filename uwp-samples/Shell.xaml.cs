@@ -1,22 +1,28 @@
-﻿using uwpsamples.Views;
-using uwpsamples.Presentation;
+﻿using uwp_samples.Views;
+using uwp_samples.Presentation;
 using System.Linq;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Animation;
 
-namespace uwpsamples {
+namespace uwp_samples
+{
     public sealed partial class Shell : UserControl
     {
         private static string _header;
-        public string Header {
-            get {
-                if (_header == null) {
+        public string Header
+        {
+            get
+            {
+                if (_header == null)
+                {
                     _header = "UWP Samples";
                 }
                 return _header;
             }
-            set {
-                if (_header != value) {
+            set
+            {
+                if (_header != value)
+                {
                     _header = value;
                 }
             }
@@ -28,29 +34,39 @@ namespace uwpsamples {
 
             var vm = new ShellViewModel();
 
-            vm.MenuItems.Add(new MenuItem { 
+            vm.MenuItems.Add(new MenuItem
+            {
                 Icon = "",
-                SymbolAsChar = '\uE706',
+                SymbolAsChar = '\uEA8A',
                 Label = "Home",
                 PageType = typeof(WelcomePage)
             });
-            vm.MenuItems.Add(new MenuItem {
+            vm.MenuItems.Add(new MenuItem
+            {
                 Icon = "",
-                SymbolAsChar = '\uE00B',
+                SymbolAsChar = '\uE74C',
                 Label = "wincomposition",
                 PageType = typeof(WincompositionPage)
             });
-            vm.MenuItems.Add(new MenuItem {
+            vm.MenuItems.Add(new MenuItem
+            {
                 Icon = "",
-                SymbolAsChar = '\uE11A',
+                SymbolAsChar = '\uE179',
                 Label = "ListView",
-                PageType = typeof(Page2)
+                PageType = typeof(ListPage)
+            });
+            vm.MenuItems.Add(new MenuItem
+            {
+                Icon = "",
+                SymbolAsChar = '\uE81C',
+                Label = "Tasks",
+                PageType = typeof(TasksPage)
             });
             vm.MenuItems.Add(new MenuItem {
-                Icon = "",
-                SymbolAsChar = '\uE2AF',
-                Label = "Tasks",
-                PageType = typeof(Page3)
+                Icon = "",
+                SymbolAsChar = '\uE713',
+                Label = "About",
+                PageType = typeof(AboutPage)
             });
 
             // select the first menu item
@@ -71,7 +87,8 @@ namespace uwpsamples {
         {
             get
             {
-                if (Frame.SourcePageType != null) {
+                if (Frame.SourcePageType != null)
+                {
                     SetPageHeaderTitle(Frame.SourcePageType.Name);
                 }
                 return Frame;
@@ -82,15 +99,17 @@ namespace uwpsamples {
         /// Set the related header when loading to a page
         /// </summary>
         /// <param name="name">page name</param>
-        private void SetPageHeaderTitle(string name) {
-            switch (name) {
+        private void SetPageHeaderTitle(string name)
+        {
+            switch (name)
+            {
                 case "WelcomePage":
                     VisualHeader.Text = "UWP Samples";
                     break;
                 case "WincompositionPage":
                     VisualHeader.Text = "WinComposition Samples";
                     break;
-                case "ListViewPage":
+                case "ListPage":
                     VisualHeader.Text = "ListView Samples";
                     break;
                 case "TasksPage":
@@ -106,7 +125,8 @@ namespace uwpsamples {
         /// Set a custom header
         /// </summary>
         /// <param name="name">custom header's name</param>
-        public void SetHeaderTitle(string name) {
+        public void SetHeaderTitle(string name)
+        {
             VisualHeader.Text = name;
         }
 

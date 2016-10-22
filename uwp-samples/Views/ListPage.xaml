@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="uwp_samples.Views.WincompositionPage"
+    x:Class="uwp_samples.Views.ListPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:uwp_samples.Views"
@@ -10,17 +10,23 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <ScrollViewer Margin="24">
             <StackPanel>
-                <RichTextBlock Margin="0, 12">
+                <RichTextBlock Margin="0,12">
                     <Paragraph>
-                        <Bold></Bold>
-                    </Paragraph>
-                    <Paragraph>
-                        This section presentes Windows Composition samples for UWP app.
+                        To add useful manipulations to your ListView
                     </Paragraph>
                 </RichTextBlock>
-                <Button Content="Parallax Image" Margin="0,6" Click="ParallaxPage_Click"/>
-                <Button Content="Image Blur" Margin="0,6" Click="BlurPage_Click"/>
+
+                <Button Content="Swypable ListView" Margin="0,6"/>
+                <Button Content="Go to top of a List" Margin="0,6"/>
+
+                <RichTextBlock Margin="0,12">
+                    <Paragraph>
+                        <Bold>NOT IMPLEMENTED YET</Bold>
+                    </Paragraph>
+                </RichTextBlock>
+                <FontIcon Glyph="&#xEA8D;" FontSize="46" FontFamily="Segoe MDL2 Assets"/>
             </StackPanel>
         </ScrollViewer>
+        
     </Grid>
 </Page>

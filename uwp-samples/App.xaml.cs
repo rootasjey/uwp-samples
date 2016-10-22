@@ -1,24 +1,33 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
+using Windows.Foundation;
+using Windows.Foundation.Collections;
 using Windows.Foundation.Metadata;
 using Windows.Phone.UI.Input;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Controls.Primitives;
+using Windows.UI.Xaml.Data;
+using Windows.UI.Xaml.Input;
+using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace uwpsamples {
+namespace uwp_samples {
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
     /// </summary>
-    sealed partial class App : Application
-    {
+    sealed partial class App : Application {
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
         /// </summary>
-        public App()
-        {
+        public App() {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
         }
@@ -28,8 +37,7 @@ namespace uwpsamples {
         /// will be used such as when the application is launched to open a specific file.
         /// </summary>
         /// <param name="e">Details about the launch request and process.</param>
-        protected override void OnLaunched(LaunchActivatedEventArgs e)
-        {
+        protected override void OnLaunched(LaunchActivatedEventArgs e) {
 
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached) {
@@ -72,8 +80,7 @@ namespace uwpsamples {
         }
 
         // handle hardware back button press
-        void OnBackPressed(object sender, BackPressedEventArgs e)
-        {
+        void OnBackPressed(object sender, BackPressedEventArgs e) {
             var shell = (Shell)Window.Current.Content;
             if (shell.RootFrame.CanGoBack) {
                 e.Handled = true;
@@ -82,8 +89,7 @@ namespace uwpsamples {
         }
 
         // handle software back button press
-        void OnBackRequested(object sender, BackRequestedEventArgs e)
-        {
+        void OnBackRequested(object sender, BackRequestedEventArgs e) {
             var shell = (Shell)Window.Current.Content;
             if (shell.RootFrame.CanGoBack) {
                 e.Handled = true;
@@ -91,8 +97,7 @@ namespace uwpsamples {
             }
         }
 
-        void OnNavigated(object sender, NavigationEventArgs e)
-        {
+        void OnNavigated(object sender, NavigationEventArgs e) {
             UpdateBackButtonVisibility();
         }
 
@@ -101,8 +106,7 @@ namespace uwpsamples {
         /// </summary>
         /// <param name="sender">The Frame which failed navigation</param>
         /// <param name="e">Details about the navigation failure</param>
-        void OnNavigationFailed(object sender, NavigationFailedEventArgs e)
-        {
+        void OnNavigationFailed(object sender, NavigationFailedEventArgs e) {
             throw new Exception("Failed to load Page " + e.SourcePageType.FullName);
         }
 
@@ -113,15 +117,13 @@ namespace uwpsamples {
         /// </summary>
         /// <param name="sender">The source of the suspend request.</param>
         /// <param name="e">Details about the suspend request.</param>
-        private void OnSuspending(object sender, SuspendingEventArgs e)
-        {
+        private void OnSuspending(object sender, SuspendingEventArgs e) {
             var deferral = e.SuspendingOperation.GetDeferral();
             //TODO: Save application state and stop any background activity
             deferral.Complete();
         }
 
-        private void UpdateBackButtonVisibility()
-        {
+        private void UpdateBackButtonVisibility() {
             var shell = (Shell)Window.Current.Content;
 
             var visibility = AppViewBackButtonVisibility.Collapsed;

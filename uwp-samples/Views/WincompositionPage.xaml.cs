@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-using uwpsamples.Views.wincomposition;
+using uwp_samples.Views.wincomposition;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -17,7 +17,7 @@ using Windows.UI.Xaml.Navigation;
 
 // Pour plus d'informations sur le modèle d'élément Page vierge, voir la page http://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace uwpsamples.Views {
+namespace uwp_samples.Views {
     /// <summary>
     /// Une page vide peut être utilisée seule ou constituer une page de destination au sein d'un frame.
     /// </summary>
@@ -26,11 +26,11 @@ namespace uwpsamples.Views {
             this.InitializeComponent();
         }
 
-        private void ParallaxPage_Click(Windows.UI.Xaml.Documents.Hyperlink sender, Windows.UI.Xaml.Documents.HyperlinkClickEventArgs args) {
+        private void ParallaxPage_Click(System.Object sender, Windows.UI.Xaml.RoutedEventArgs e) {
             Frame.Navigate(typeof(ParallaxPage), null, new DrillInNavigationTransitionInfo());
         }
 
-        private void BlurPage_Click(Windows.UI.Xaml.Documents.Hyperlink sender, Windows.UI.Xaml.Documents.HyperlinkClickEventArgs args) {
+        private void BlurPage_Click(System.Object sender, Windows.UI.Xaml.RoutedEventArgs e) {
             Frame.Navigate(typeof(BlurPage), null, new DrillInNavigationTransitionInfo());
         }
     }

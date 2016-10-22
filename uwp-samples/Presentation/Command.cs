@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace uwpsamples.Presentation
+namespace uwp_samples.Presentation
 {
     public class Command : ICommand
     {

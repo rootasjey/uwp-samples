@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace uwpsamples.Models {
+namespace uwp_samples.Models {
     public class Person {
         private string _name;
         private int _age;

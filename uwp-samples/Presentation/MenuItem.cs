@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace uwpsamples.Presentation
+namespace uwp_samples.Presentation
 {
     public class MenuItem : NotifyPropertyChanged
     {

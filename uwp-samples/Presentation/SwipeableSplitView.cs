@@ -9,7 +9,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Shapes;
 
-namespace uwpsamples.Presentation {
+namespace uwp_samples.Presentation {
     public sealed class SwipeableSplitView : SplitView
     {
         #region private variables

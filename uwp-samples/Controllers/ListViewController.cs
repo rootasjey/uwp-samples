@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.ObjectModel;
-using uwpsamples.Models;
+using uwp_samples.Models;
 
-namespace uwpsamples.Controllers {
+namespace uwp_samples.Controllers {
     public class ListViewController {
 
         string[] names = { "Charles", "Emma", "Tontine", "Charlene", "Four"};

@@ -1,14 +1,14 @@
 ﻿using Microsoft.Graphics.Canvas.Effects;
 using System.Numerics;
-using uwpsamples.Controllers;
-using uwpsamples.Helpers;
+using uwp_samples.Controllers;
+using uwp_samples.Helpers;
 using Windows.UI.Composition;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Hosting;
 
 // Pour plus d'informations sur le modèle d'élément Page vierge, voir la page http://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace uwpsamples.Views.wincomposition {
+namespace uwp_samples.Views.wincomposition {
     public sealed partial class BlurPage : Page {
         // WinComposition variables
         private Visual _backgroundVisual;

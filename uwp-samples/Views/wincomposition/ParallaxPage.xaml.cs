@@ -1,12 +1,12 @@
 ﻿using System;
-using uwpsamples.Controllers;
-using uwpsamples.Helpers;
+using uwp_samples.Controllers;
+using uwp_samples.Helpers;
 using Windows.UI.Composition;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Hosting;
 
-namespace uwpsamples.Views.wincomposition {
+namespace uwp_samples.Views.wincomposition {
     public sealed partial class ParallaxPage : Page {
 
         private Visual _backgroundVisual;

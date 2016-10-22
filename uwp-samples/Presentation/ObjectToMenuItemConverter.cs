@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Data;
 
-namespace uwpsamples.Presentation
+namespace uwp_samples.Presentation
 {
     public class ObjectToMenuItemConverter : IValueConverter
     {

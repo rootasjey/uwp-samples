@@ -9,7 +9,7 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Media;
 
-namespace uwpsamples.Helpers {
+namespace uwp_samples.Helpers {
     public static class VisualTreeExtensions {
         public static T GetChildOfType<T>(this DependencyObject depObj) where T : DependencyObject {
             if (depObj == null) return null;
